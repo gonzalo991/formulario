@@ -11,5 +11,16 @@ document.getElementById('leadForm').addEventListener('submit', function(event) {
       'leadEmail': email
   });
 
+      // Enviar datos de conversiones mejoradas
+      dataLayer.push({
+        'event': 'conversion',
+        'user_data': {
+            'email': email,
+            'name': name
+        }
+    });
+
   alert('Form submitted successfully!');
+
+  window.location.href = "page2.html";
 });
